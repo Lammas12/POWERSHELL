@@ -325,6 +325,29 @@ $tabPage5 = New-Object System.Windows.Forms.TabPage
 $tabPage5.Text = "Nupud"
 $tabControl.Controls.Add($tabPage5)
 
+# Hyper V
+
+$nupp1 = New-Object System.Windows.Forms.Button
+$nupp1.Location = New-Object System.Drawing.Point(10,50)
+$nupp1.Size = New-Object System.Drawing.Size(320,25)
+$nupp1.Text = "Hyper V lubamine/paigaldamine"
+$nupp1.add_click({Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V -All})
+$tabPage5.Controls.add($nupp1)
+
+# Prügikasti tühjendamine
+
+$nupp2 = New-Object System.Windows.Forms.Button
+$nupp2.Location = New-Object System.Drawing.Point(10,75)
+$nupp2.Size = New-Object System.Drawing.Size(320,25)
+$nupp2.Text = "Prügikasti tühjendamine"
+$nupp2.add_click({Clear-RecycleBin -Force})
+$tabPage5.Controls.add($nupp2)
+
+
+# 
+
+
+
 
 
 
