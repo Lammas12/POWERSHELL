@@ -306,7 +306,6 @@ $tabControl.Controls.Add($tabPage4)
     $runButton.Add_Click({
         $scriptInput = $inputBox.Text
 
-        # Näide: Käivita sisestatud käsk ja saada väljund tekstikasti
         try {
             $output = Invoke-Expression $scriptInput
             $outputBox.AppendText("$output`r`n")
@@ -357,4 +356,3 @@ $AppForm.ShowDialog()
 
 # Puhastab ära
 $AppForm.Dispose()
-
